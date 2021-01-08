@@ -83,6 +83,6 @@ test:
 #
 production:
   <<: *default
-  database: comunitario_production
-  username: comunitario
-  password: <%= ENV['COMUNITARIO_DATABASE_PASSWORD'] %>
+  database: <%= ENV['DATABASE_URL'] %>
+  #username: comunitario
+  #password: <%= ENV['COMUNITARIO_DATABASE_PASSWORD'] %>
