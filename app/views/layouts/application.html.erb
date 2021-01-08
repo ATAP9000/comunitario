@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<meta name="viewport" content="width-device-width, user-scable-no,initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
+	<head>
+    <title>E.A.O Carmen Cabriles</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+	<% unless current_page?(new_session_user_path) %>
+		<%= render 'layouts/header' %>
+	<%end%>
+    <%= yield %>
+    
+  </body>
+</html>

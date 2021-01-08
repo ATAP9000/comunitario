@@ -1,0 +1,22 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+	<div class="container-fluid">
+		<nav>
+			<label for="toggle"><%= image_tag("menu.png", width: '70px') %></label>
+				<input type="checkbox" id="toggle" />		
+				<ul>
+					<li><a><%= link_to "Principal",'/' %></a></li>
+						<li><a><%= link_to "Publicaciones", articulos_ver_path %></a></li>
+						<% if current_user && current_user.admin %>
+						<li><a><%= link_to "Administracion", usuarios_ver_path %></a></li>
+						<% end%>
+					<li><a><%= link_to "Programas", programas_ver_path %></a></li>
+					<li><a><%= link_to "Sobre nosotros", sobre_ver_path %></a></li>
+					<% if user_signed_in? %>
+						<li><a><%= link_to "Salir", destroy_user_session_path, method: :delete  %></a></li>
+					<% else %>
+						<li><a><%= link_to "Ingresar", new_session_user_path %></a></li>
+					<% end %>
+				</ul>
+		</nav>
+	</div>
+</header>

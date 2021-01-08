@@ -1,0 +1,16 @@
+<section id="contenedor">
+<section id="texto">
+<h1>Lista de Usuarios</h1>
+
+
+<% if current_user && current_user.admin %>
+	<%= link_to "Crear Usuario", new_user_registration_path , class: 'btn btn-primary' %>
+<br>
+<% @users.each do |user| %>
+  <%= user.email %>
+	<%= link_to "Borrar", admin_destroy_user_path(user), method: :delete, data: { confirm: "You sure?" } , class: 'btn btn-primary' %><br>
+
+<% end %><br>
+<%end%>
+</section>
+</section>

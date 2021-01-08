@@ -1,0 +1,14 @@
+<section id="contenedor">
+<%= render 'layouts/header' %><br>
+<section id="texto">
+<h1><%= @articulo.titulo %></h1>
+<% if @articulo.image.attached? %>
+    <%= image_tag @articulo.image, style: "width: 200px" %>
+<% end%>
+<p><%= @articulo.body %></p>
+<p>
+  Publicado el <%= @articulo.created_at.strftime("%d/%m/%Y, %l:%M%P") %>
+</p>
+</section>
+<%= link_to "Volver", articulos_ver_path %>
+</section>

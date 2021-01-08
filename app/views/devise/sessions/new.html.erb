@@ -1,0 +1,46 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+	<div class="container-fluid">
+		<nav>
+			<label for="toggle"><%= image_tag("menu.png", width: '70px') %></label>
+				<input type="checkbox" id="toggle" />		
+				<ul>
+					<li><a><%= link_to "Principal",'/' %></a></li>
+					<li><a><%= link_to "Programas", programas_ver_path %></a></li>
+					<li><a><%= link_to "Sobre nosotros", sobre_ver_path %></a></li>
+				</ul>
+		</nav>
+	</div>
+</header>
+<section id="contenedor">
+<section id="loginForm"><br>
+
+<section id="ventana">
+
+<div class="form-group"><br>
+<h1>Ingresar</h1>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= f.label :correo %><br>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Clave %><br>
+    <%= f.password_field :password, autocomplete: "current-password", class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Ingresar", class: "btn btn-primary" %>
+
+  </div>
+<% end %>
+
+</section>
+<br>
+
+</section><br><footer>
+		<p> Escuela de Artes y oficios Carmen cabriles copyright 2020. Todos los derechos reservados.
+</p>
+</footer>	
+</section>
+</section>
