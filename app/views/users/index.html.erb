@@ -2,15 +2,31 @@
 <section id="texto">
 <h1>Lista de Usuarios</h1>
 
-
 <% if current_user && current_user.admin %>
-	<%= link_to "Crear Usuario", new_user_registration_path , class: 'btn btn-primary' %>
+	<%= link_to "Crear Usuario", new_user_registration_path , class: 'btn btn-default' %>
 <br>
-<% @users.each do |user| %>
-  <%= user.email %>
-	<%= link_to "Borrar", admin_destroy_user_path(user), method: :delete, data: { confirm: "You sure?" } , class: 'btn btn-primary' %><br>
+<table id='usuario-tabla' class="table table-hover">
+            <thead  class="thead-light">
+             <tr>
+                <th>usuario</th>
+                <th colspan="1"></th>
+              </tr>
+            </thead>            
+            <tbody>
+            <% @users.each do |user| %>
+                            <tr>
+                             <td><%= user.email %></td>
+	 <td><%= link_to "Borrar", admin_destroy_user_path(user), method: :delete, data: { confirm: "Seguro?" } , class: 'btn btn-default' %></td>
+</tr>
+<% end %>
+     </tbody>
+          </table>                
 
-<% end %><br>
+               
+            
+            
+            
+
 <%end%>
 </section>
 </section>

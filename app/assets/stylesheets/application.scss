@@ -1,3 +1,4 @@
+/* imports necesarios para el bootstrap*/
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -21,7 +22,6 @@ a:hover {
 a:active {
   color: white;
 }
-
 
 /*Navbar*/
 .navbar {	
@@ -72,8 +72,7 @@ a:active {
 	.date{
 	width: 25%;
 	border-right: 2px solid white;
-	float: left;
-}
+	float: left;}
 }
 
 #texto{
@@ -82,7 +81,6 @@ a:active {
 	margin-bottom: auto;
 	margin-left: 20px;
 	margin-right: 20px;
-	color: #777;
 	text-align: center;
 	line-height: 47px;
 }
@@ -125,9 +123,9 @@ a:active {
 	background-image: image-url('flores.jpg');
 	background-size: cover;
 	border-radius: 25px;
-	border-radius: 25px;
 	h1{
 	font-family: "Helvetica",Arial,sans-serif;
+	color: black; 
 }
  p{
 	font-family: "Helvetica",Arial,sans-serif;
@@ -164,6 +162,9 @@ footer{
 
 .thumbnail {
 	background-color: #b19cd9;
+	border-radius: 25px;
+	border-color: #212121;
+
 }
 
 .caption {
@@ -198,9 +199,6 @@ footer{
 text-align: center;
 }
 
-.recuerdame {
-text-align: right;
-}
 .actions {
 	align-items: center;
 	text-align: center;
@@ -209,10 +207,37 @@ text-align: right;
 
 }
 
-
-.pagination {
-background-color: #b19cd9;
+.pagination{
+.active a {
+color: #fff;
+background-color:  #212121;
+border-color: #212121;
 }
+.active a:hover {
+background-color: #fff;
+color:  #212121;
+border-color: #212121;
+}
+li a{
+background-color: #fff;
+color:  #212121;
+border-color: #212121;
+}
+li a:hover{
+background-color: #adb5bd;
+color:  #212121;
+border-color: #212121;
+}
+}
+ 
+.btn-default{
+ 
+background-color: #212121;
+ 
+color:  #fff;
+  
+}
+
 
 
 body {

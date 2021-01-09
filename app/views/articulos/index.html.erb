@@ -1,9 +1,10 @@
 <section id="contenedor">
+<section id="cartelera">
 <section id="texto">
 <h1>Publicaciones</h1>
 <p><%= paginate @articulos %></p>
 <% if user_signed_in? %>
-<%= link_to "Nuevo Articulo", '/articulos/new', class: 'btn btn-primary' %>
+<%= link_to "Nuevo Articulo", '/articulos/new', class: 'btn btn-default btn-lg btn-block' %>
 <% end %>
 </section><br>
 
@@ -22,8 +23,8 @@
   Publicado el <%= articulo.created_at.strftime("%d/%m/%Y, %l:%M%P") %>
 </p>
 			<% if user_signed_in? %>
-  				<%= link_to "Editar", edit_articulo_path(articulo), class: 'btn btn-primary'  %>
-  				<%= link_to "Borrar", articulo_path(articulo), class: 'btn btn-primary', method: :delete, data: { confirm: "seguro?" } %>
+  				<%= link_to "Editar", edit_articulo_path(articulo), class: 'btn btn-default'  %>
+  				<%= link_to "Borrar", articulo_path(articulo), class: 'btn btn-default', method: :delete, data: { confirm: "seguro?" } %>
   				<% end %>
 	        </div>
 	    </div>
@@ -38,6 +39,7 @@
 </div>
 
 </div>
+</section>
 		
 <footer>
 		<p> Escuela de Artes y oficios Carmen cabriles copyright 2020. Todos los derechos reservados.
