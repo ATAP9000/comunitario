@@ -9,6 +9,10 @@
 <p>
   Publicado el <%= @articulo.created_at.strftime("%d/%m/%Y, %l:%M%P") %>
 </p>
+<%= link_to "Volver", '/articulos', class: 'btn btn-default btn-lg btn-block' %><br>
 </section>
-<%= link_to "Volver", articulos_ver_path %>
+<footer>
+		<p> Escuela de Artes y oficios Carmen cabriles copyright 2020. Todos los derechos reservados.
+</p>
+</footer>
 </section>

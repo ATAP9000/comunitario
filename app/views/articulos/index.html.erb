@@ -2,9 +2,9 @@
 <section id="cartelera">
 <section id="texto">
 <h1>Publicaciones</h1>
-<p><%= paginate @articulos %></p>
+<p><%= paginate @articulos, window: 0 %></p>
 <% if user_signed_in? %>
-<%= link_to "Nuevo Articulo", '/articulos/new', class: 'btn btn-default btn-lg btn-block' %>
+<%= link_to "Nuevo Artículo", '/articulos/new', class: 'btn btn-default btn-lg btn-block' %>
 <% end %>
 </section><br>
 
@@ -33,7 +33,7 @@
   
 </div>
 <section id="texto">
-<p><%= paginate @articulos %></p>
+<p><%= paginate @articulos, window: 0 %></p>
 </section><br>
 
 </div>

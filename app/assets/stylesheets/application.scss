@@ -133,6 +133,12 @@ a:active {
 
 }}
 
+#mision{
+    background: #fff;
+    border-radius: 25px;
+    border-color: #212121;
+}
+
 footer{
 	border-top: 2px solid #000;
 	width: 100%;
@@ -228,8 +234,12 @@ background-color: #adb5bd;
 color:  #212121;
 border-color: #212121;
 }
+.disabled a {
+display:none;
 }
- 
+}
+
+
 .btn-default{
  
 background-color: #212121;

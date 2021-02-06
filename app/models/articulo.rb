@@ -5,4 +5,5 @@ validates :body, presence: true, length: { minimum: 10 }
 
 #mostrar ultimo de primero
 default_scope {order(created_at: :desc)}
+paginates_per 6
 end

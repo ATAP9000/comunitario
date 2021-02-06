@@ -1,13 +1,11 @@
 <section id="contenedor">
-<%= render 'layouts/header' %>
+  <%= render 'layouts/header' %>
 <section id="texto">
-<h1>Nuevo Articulo</h1>
+<h1>Nuevo Artículo</h1>
+<%= render "form", articulo: @articulo %>	
 </section>
-<%= render "form", articulo: @articulo %>
-
-<%= link_to "Volver", articulos_ver_path %>
 <footer>
 		<p> Escuela de Artes y oficios Carmen cabriles copyright 2020. Todos los derechos reservados.
 </p>
-</footer>	
+</footer>
 </section>
