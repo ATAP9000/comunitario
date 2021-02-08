@@ -8,15 +8,18 @@ def new
 end
 
 def create
-super
+  super
 end
 
+def delete
+  super
+end
 
   private
-  def sign_up(resource_name, resource)
-    true
-  end
-
+ def sign_up(resource_name, resource)
+   true
+ end
+   
 def authenticate_user
 return unless !user_signed_in?
 redirect_to root_path
