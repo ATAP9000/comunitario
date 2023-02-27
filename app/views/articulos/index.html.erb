@@ -20,7 +20,7 @@
 			<p><%= truncate(articulo.body,length: 30) %></p>
 			</p>
 			<p>
-  Publicado el <%= articulo.created_at.strftime("%d/%m/%Y, %l:%M%P") %>
+ 
 </p>
 			<% if user_signed_in? %>
   				<%= link_to "Editar", edit_articulo_path(articulo), class: 'btn btn-default'  %>
